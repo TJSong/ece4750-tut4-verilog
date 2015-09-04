@@ -9,6 +9,7 @@
 `define TUT4_VERILOG_REGINCR_REG_INCR_V
 
 `include "vc/trace.v"
+// logic is bit vector
 
 module tut4_verilog_regincr_RegIncr
 (
@@ -27,6 +28,10 @@ module tut4_verilog_regincr_RegIncr
     else
       reg_out <= in;
 
+  
+  logic[7:0] reg_out;
+  assign temp_wire = reg_out + 1;
+  assign out = reg_out;
   // ''' TUTORIAL TASK '''''''''''''''''''''''''''''''''''''''''''''''''''
   // This model is incomplete. As part of the tutorial you will add a
   // combinational logic to model the incrementer logic.
